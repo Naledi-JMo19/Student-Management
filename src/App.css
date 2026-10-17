@@ -1,0 +1,92 @@
+:root {
+  --primary: #1a73e8;
+  --danger: #d93025;
+  --success: #1e8e3e;
+  --gray: #5f6368;
+  --bg: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--gray);
+  color: #fce8e6;
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: black;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #f1f3f4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.app-header h1 { margin: 0; font-size: 24px; }
+.app-header p { margin: 5px 0 15px 0; color: var(--gray); }
+
+/* Buttons styling layout */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+}
+.btn-add { background: var(--primary); color: white; align-self: flex-start; }
+.btn-edit { background: #e8f0fe; color: var(--primary); margin-right: 8px; }
+.btn-delete { background: #fce8e6; color: var(--danger); }
+.btn-cancel { background: #f1f3f4; color: var(--gray); margin-right: 12px; }
+.btn-save { background: var(--success); color: white; }
+
+/* Table design and scaling layout */
+.table-responsive { overflow-x: auto; margin-top: 10px; }
+.student-table { width: 100%; border-collapse: collapse; text-align: left; }
+.student-table th, .student-table td { padding: 12px 15px; border-bottom: 1px solid #f1f3f4; }
+.student-table th { background-color: #f8f9fa; color: var(--gray); }
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.status-badge.active { background: #e6f4ea; color: var(--success); }
+.status-badge.inactive { background: #fce8e6; color: var(--danger); }
+
+/* Overlay Modal views styles setup */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+.form-group label { margin-bottom: 5px; font-weight: 500; }
+.form-group input, .form-group select { padding: 8px; border: 1px solid #dadce0; border-radius: 4px; }
+.checkbox-group { flex-direction: row; gap: 8px; align-items: center; margin: 20px 0; }
+.error-text { color: var(--danger); font-size: 12px; margin-top: 4px; }
+.modal-actions { display: flex; justify-content: flex-end; margin-top: 20px; }
+.empty-state { text-align: center; padding: 4px 0; color: var(--gray); font-style: italic; }
+.text-center { text-align: center; }
+.justify-center { justify-content: center; }
