@@ -8,7 +8,7 @@ function App() {
 
   const initialData = [
     {
-      id: "STU90101",
+      id: "90101",
       name: "Mpho Mohapi",
       age: 21,
       email: "mpho@limkokwing.ac.ls",
