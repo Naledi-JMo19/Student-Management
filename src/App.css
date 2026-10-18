@@ -12,6 +12,9 @@ body {
   background-color: var(--gray);
   color: #fce8e6;
 }
+h2{
+  color:black;
+}
 
 .app-container {
   max-width: 1100px;
